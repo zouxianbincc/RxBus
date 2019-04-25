@@ -174,6 +174,7 @@ public final class RxBus {
         CacheUtils.getInstance().removeDisposables(subscriber);
     }
 
+
     private static class Holder {
         private static final RxBus BUS = new RxBus();
     }

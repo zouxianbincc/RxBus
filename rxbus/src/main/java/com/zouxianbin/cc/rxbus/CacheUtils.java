@@ -85,7 +85,10 @@ final class CacheUtils {
             disposables.clear();
             disposablesMap.remove(subscriber);
         }
-        removeStickyDisposables(subscriber);
+       if (stickyEventsMap !=null){
+           stickyEventsMap.clear();
+           Log.e("stickyEvents",stickyEventsMap.toString());
+       }
     }
 
     void removeStickyDisposables(final Object subscriber) {
