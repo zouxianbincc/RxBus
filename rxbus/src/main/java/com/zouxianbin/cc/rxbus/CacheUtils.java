@@ -1,5 +1,7 @@
 package com.zouxianbin.cc.rxbus;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -89,9 +91,12 @@ final class CacheUtils {
     void removeStickyDisposables(final Object subscriber) {
         synchronized (stickyEventsMap) {
             List<TagMessage> stickyEvents = stickyEventsMap.get(subscriber);
+
             if (stickyEvents == null) return ;
+            Log.e("stickyEvents",stickyEvents.toString());
             stickyEvents.clear();
             stickyEventsMap.remove(subscriber);
+            Log.e("stickyEvents",stickyEventsMap.toString());
 
         }
     }
