@@ -90,8 +90,8 @@ final class CacheUtils {
 
     void removeStickyDisposables(final Object subscriber) {
         synchronized (stickyEventsMap) {
-            List<TagMessage> stickyEvents = stickyEventsMap.get(subscriber);
 
+            List<TagMessage> stickyEvents = stickyEventsMap.get(Utils.getClassFromObject(subscriber));
             if (stickyEvents == null) return ;
             Log.e("stickyEvents",stickyEvents.toString());
             stickyEvents.clear();
