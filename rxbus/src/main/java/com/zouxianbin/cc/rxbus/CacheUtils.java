@@ -85,22 +85,15 @@ final class CacheUtils {
             disposables.clear();
             disposablesMap.remove(subscriber);
         }
-       if (stickyEventsMap !=null){
-           stickyEventsMap.clear();
-           Log.e("stickyEvents",stickyEventsMap.toString());
-       }
+
     }
 
-    void removeStickyDisposables(final Object subscriber) {
+    void removeAllSticky() {
         synchronized (stickyEventsMap) {
-
-            List<TagMessage> stickyEvents = stickyEventsMap.get(Utils.getClassFromObject(subscriber));
-            if (stickyEvents == null) return ;
-            Log.e("stickyEvents",stickyEvents.toString());
-            stickyEvents.clear();
-            stickyEventsMap.remove(subscriber);
-            Log.e("stickyEvents",stickyEventsMap.toString());
-
+            if (stickyEventsMap != null) {
+                stickyEventsMap.clear();
+                Log.e("stickyEvents", stickyEventsMap.toString());
+            }
         }
     }
 

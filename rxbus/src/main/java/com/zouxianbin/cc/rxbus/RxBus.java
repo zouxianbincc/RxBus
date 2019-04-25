@@ -173,7 +173,9 @@ public final class RxBus {
     public void unregister(final Object subscriber) {
         CacheUtils.getInstance().removeDisposables(subscriber);
     }
-
+    public void unregisterAll() {
+        CacheUtils.getInstance().removeAllSticky();
+    }
 
     private static class Holder {
         private static final RxBus BUS = new RxBus();
