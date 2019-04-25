@@ -11,7 +11,7 @@
 ## dd the dependency
 
 dependencies {
-	        implementation 'com.github.zouxianbincc:Rxbus:Tag'
+	        implementation 'com.github.zouxianbincc:Rxbus:1.0.0'
 	} 
   
   
