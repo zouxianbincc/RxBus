@@ -1,5 +1,4 @@
 package com.zouxianbin.cc.rxbus;
-
 import org.reactivestreams.Subscription;
 
 import java.util.concurrent.atomic.AtomicReference;
@@ -19,9 +18,9 @@ final class MyLambdaSubscriber<T> extends AtomicReference<Subscription>
         implements FlowableSubscriber<T>, Subscription, Disposable, LambdaConsumerIntrospection {
 
     private static final long serialVersionUID = -7251123623727029452L;
-    final Consumer<? super T> onNext;
-    final Consumer<? super Throwable> onError;
-    final Action onComplete;
+    final Consumer<? super T>            onNext;
+    final Consumer<? super Throwable>    onError;
+    final Action                         onComplete;
     final Consumer<? super Subscription> onSubscribe;
 
     public MyLambdaSubscriber(Consumer<? super T> onNext, Consumer<? super Throwable> onError,

@@ -1,7 +1,5 @@
 package com.zouxianbin.cc.rxbus;
-
 import org.reactivestreams.Subscription;
-
 import io.reactivex.Flowable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
@@ -9,7 +7,6 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.internal.functions.Functions;
 import io.reactivex.internal.functions.ObjectHelper;
 import io.reactivex.internal.operators.flowable.FlowableInternalHelper;
-
 
 public final class FlowableUtils {
 

@@ -5,6 +5,14 @@ import android.util.Log;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
+/**
+ * <pre>
+ *     author: Blankj
+ *     blog  : http://blankj.com
+ *     time  : 2017/12/24
+ *     desc  :
+ * </pre>
+ */
 final class Utils {
 
     private Utils() {
